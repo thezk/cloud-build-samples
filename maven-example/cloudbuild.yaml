@@ -14,7 +14,7 @@
 # [START cloudbuild_maven]
 steps:
   - name: ubuntu
-    args: ['echo', 'hello $(commit.commit.message)']
+    args: ['echo', 'hello ${_COMMIT_MESSAGE}']
   - name: maven:3-jdk-8
     entrypoint: mvn
     args: ["test"]
