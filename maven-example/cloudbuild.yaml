@@ -23,7 +23,7 @@ steps:
     args: ["build", "-t", "gcr.io/$PROJECT_ID/hellospring", "--build-arg=JAR_FILE=target/hello-spring-1.0.0.jar", "."]
 images: ["gcr.io/$PROJECT_ID/hellospring"]
 substitutions:
-    _TestHello: "test"
+    _TESTHELLO: "test"
 options:
     dynamicSubstitutions: false
 # [END cloudbuild_maven]
