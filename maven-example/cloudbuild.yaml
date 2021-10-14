@@ -13,6 +13,8 @@
 # limitations under the License.
 # [START cloudbuild_maven]
 steps:
+  - name: test_commit_value
+    args: ['echo', 'hello $(commit.commit.message)']
   - name: maven:3-jdk-8
     entrypoint: mvn
     args: ["test"]
